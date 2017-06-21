@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Manufacturer: MyString
+  Model: MyString
+  Consumption: 1.5
+  Colour: MyString
+  YearOfRelease: 1
+  Doors: 1
+  URL: MyString
+
+two:
+  Manufacturer: MyString
+  Model: MyString
+  Consumption: 1.5
+  Colour: MyString
+  YearOfRelease: 1
+  Doors: 1
+  URL: MyString
