@@ -21,7 +21,7 @@
 </p>
 
 <p>
-  <strong>Yearofrelease:</strong>
+  <strong>Year Of Release:</strong>
   <%= @car.YearOfRelease %>
 </p>
 
@@ -31,8 +31,8 @@
 </p>
 
 <p>
-  <strong>Url:</strong>
-  <%= @car.URL %>
+  <strong>Image provided:</strong><br>
+  <img src="<%= @car.URL %>" width="50%" height="50%" />
 </p>
 
 <%= link_to 'Edit', edit_car_path(@car) %> |

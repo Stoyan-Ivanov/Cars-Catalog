@@ -1,38 +1,36 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Cars</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Manufacturer</th>
-      <th>Model</th>
-      <th>Consumption</th>
-      <th>Colour</th>
-      <th>Yearofrelease</th>
-      <th>Doors</th>
-      <th>Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @cars.each do |car| %>
-      <tr>
-        <td><%= car.Manufacturer %></td>
-        <td><%= car.Model %></td>
-        <td><%= car.Consumption %></td>
-        <td><%= car.Colour %></td>
-        <td><%= car.YearOfRelease %></td>
-        <td><%= car.Doors %></td>
-        <td><%= car.URL %></td>
-        <td><%= link_to 'Show', car %></td>
-        <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @cars.each do |car| %>
+    <table cellpadding="0px" cellspacing="20px">
+      <thead>
+        <tr>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>FuelConsumption</th>
+          <th>Colour</th>
+          <th>YearOfRelease</th>
+          <th>DoorsCount</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td><%= car.Manufacturer %></td>
+            <td><%= car.Model %></td>
+            <td><%= car.Consumption %></td>
+            <td><%= car.Colour %></td>
+            <td><%= car.YearOfRelease %></td>
+            <td><%= car.Doors %> <style media="screen">
+            </style></td>
+            <td><%= link_to 'Show', car %></td>
+            <td><%= link_to 'Edit', edit_car_path(car) %></td>
+            <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      </tbody>
+    </table>
+    <img src="<%= car.URL %>" width="50%" height="50%" />
+<% end %>
 
 <br>
 
