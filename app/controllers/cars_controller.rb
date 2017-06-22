@@ -1,10 +1,15 @@
 class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
+ skip_before_filter :verify_authenticity_token
 
   # GET /cars
   # GET /cars.json
   def index
     @cars = Car.all
+	respond_to do |format|
+		format.json { render json: @cars }
+		format.html
+	end
   end
 
   # GET /cars/1
@@ -28,11 +33,11 @@ class CarsController < ApplicationController
 
     respond_to do |format|
       if @car.save
-        format.html { redirect_to @car, notice: 'Car was successfully created.' }
         format.json { render :show, status: :created, location: @car }
       else
-        format.html { render :new }
+        # format.html { render :new }
         format.json { render json: @car.errors, status: :unprocessable_entity }
+	redirect_to :index
       end
     end
   end
@@ -49,6 +54,7 @@ class CarsController < ApplicationController
         format.json { render json: @car.errors, status: :unprocessable_entity }
       end
     end
+	
   end
 
   # DELETE /cars/1
