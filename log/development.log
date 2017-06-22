@@ -3146,3 +3146,63 @@ Processing by CarsController#index as HTML
 Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/cars" for 127.0.0.1 at 2017-06-22 17:24:30 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:CarsController> at /home/swifty_swizzy/Cars-Catalog/app/controllers/cars_controller.rb:3)
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 693ms (Views: 662.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2017-06-22 17:31:23 +0300
+Processing by CarsController#index as */*
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2017-06-22 17:36:41 +0300
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2017-06-22 17:37:33 +0300
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 52ms (Views: 47.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2017-06-22 17:37:46 +0300
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/_form.html.erb (85.7ms)
+  Rendered cars/new.html.erb within layouts/application (87.7ms)
+Completed 200 OK in 125ms (Views: 122.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2017-06-22 17:39:05 +0300
+Processing by CarsController#create as JS
+  Parameters: {"utf8"=>"✓", "car"=>{"Manufacturer"=>"Valkata Mobil", "Model"=>"JSON", "Consumption"=>"1", "Colour"=>"Yellow", "YearOfRelease"=>"1914", "Doors"=>"8", "URL"=>"http://men.hotnews.bg/static/uploads/tinymce/Lamborghini-Sesto-Elemento-10.jpg"}, "commit"=>"Create Car"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("Manufacturer", "Model", "Consumption", "Colour", "YearOfRelease", "Doors", "URL", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["Manufacturer", "Valkata Mobil"], ["Model", "JSON"], ["Consumption", 1.0], ["Colour", "Yellow"], ["YearOfRelease", 1914], ["Doors", 8], ["URL", "http://men.hotnews.bg/static/uploads/tinymce/Lamborghini-Sesto-Elemento-10.jpg"], ["created_at", "2017-06-22 14:39:05.881486"], ["updated_at", "2017-06-22 14:39:05.881486"]]
+  [1m[35m (134.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering cars/show.json.jbuilder
+  Rendered cars/_car.json.jbuilder (1.1ms)
+  Rendered cars/show.json.jbuilder (43.8ms)
+Completed 201 Created in 192ms (Views: 47.7ms | ActiveRecord: 135.2ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2017-06-22 17:39:09 +0300
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 72ms (Views: 69.4ms | ActiveRecord: 0.5ms)
+
+
